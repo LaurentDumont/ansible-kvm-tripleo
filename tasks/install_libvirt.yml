@@ -1,0 +1,7 @@
+---
+
+- name: Install libvirt and other related packages.
+  package:
+    name: "{{ kvm_packages }}"
+    state: present
+  notify: restart and enable libvirt.

@@ -1,0 +1,7 @@
+---
+
+- name: restart and enable libvirt.
+  service:
+    name: libvirtd
+    state: started
+    enabled: yes

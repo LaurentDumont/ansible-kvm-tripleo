@@ -1,0 +1,6 @@
+kvm_packages:
+  - qemu-kvm 
+  - libvirt 
+  - libvirt-python 
+  - libguestfs-tools 
+  - virt-install
