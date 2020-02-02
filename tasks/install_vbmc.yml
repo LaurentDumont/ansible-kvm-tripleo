@@ -1,0 +1,10 @@
+---
+
+- name: Install vbmc requirements.
+  package:
+    name: "{{ vbmc_packages }}"
+    state: present
+
+- name: Install vbmc
+  pip: 
+    name: virtualbmc

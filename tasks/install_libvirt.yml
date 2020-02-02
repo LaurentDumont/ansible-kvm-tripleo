@@ -1,5 +1,11 @@
 ---
 
+- name: Update all current installed packages.
+  yum:
+    name: '*'
+    state: latest
+    
+
 - name: Install libvirt and other related packages.
   package:
     name: "{{ kvm_packages }}"

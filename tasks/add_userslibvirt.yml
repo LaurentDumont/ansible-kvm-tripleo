@@ -1,0 +1,7 @@
+---
+
+- name: Add the Ansible user to the libvirt group.
+  user:
+    name: ansible-robot
+    groups: libvirt
+    append: yes

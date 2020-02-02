@@ -1,0 +1,16 @@
+---
+
+- name: Get the Centos install iso.
+  get_url:
+    url: http://centos.mirror.vexxhost.com/7.7.1908/isos/x86_64/CentOS-7-x86_64-Minimal-1908.iso
+    dest: /var/lib/libvirt/boot/CentOS-7-x86_64-Minimal-1908.iso
+    checksum: sha256:9a2c47d97b9975452f7d582264e9fc16d108ed8252ac6816239a3b58cef5c53d
+
+
+- name: Create the Virsh domains.
+  virt:
+    command: define
+    xml: "{{ lookup('file', 'files/kvm_xml/{{ item }}') }}"
+  loop:
+    - ooo-compute001.xml
+    - ooo-controller001.xml

@@ -4,3 +4,7 @@ kvm_packages:
   - libvirt-python 
   - libguestfs-tools 
   - virt-install
+
+vbmc_packages:
+  - gcc
+  - python-devel

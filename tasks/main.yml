@@ -1,3 +1,6 @@
 ---
 
-- include: install_libvirt.yml
+#- include: install_libvirt.yml
+#- include: install_vbmc.yml
+#- include: add_userslibvirt.yml
+- include: create_domains.yml
